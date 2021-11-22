@@ -128,3 +128,9 @@ if __name__ == '__main__':
     true_ann1 = read_ann("true-ann1.fa")
     pred_ann1 = read_ann('validation/pred-ann1.fa')
     print_all(true_ann1, pred_ann1)
+
+    true_ann2 = read_ann("true-ann2.fa")
+    pred_ann2 = read_ann('validation/pred-ann2.fa')
+    print_all(true_ann2, pred_ann2)
+
+
