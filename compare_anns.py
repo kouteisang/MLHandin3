@@ -125,4 +125,3 @@ if __name__ == '__main__':
         # Print stats
     print_all(true_ann, pred_ann)
     '''
-    

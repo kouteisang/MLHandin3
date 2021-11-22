@@ -9,8 +9,8 @@ if __name__ == '__main__':
                 continue
             file_genome = "genome" + str(j)
             file_ann = 'true-ann'+str(j)
-            genome = read_fasta_file(file_genome + '.fa')[file_genome][:12000] #x
-            ann = read_fasta_file(file_ann + '.fa')[file_ann][:12000] #z
+            genome = read_fasta_file(file_genome + '.fa')[file_genome] #x
+            ann = read_fasta_file(file_ann + '.fa')[file_ann] #z
             genome_transfer = translate_observations_to_indices(genome) # x
             ann_transfer = translate_ann_to_indices(ann, genome) #z
             print("ann = ", len(ann))
