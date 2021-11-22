@@ -125,3 +125,6 @@ if __name__ == '__main__':
         # Print stats
     print_all(true_ann, pred_ann)
     '''
+    true_ann1 = read_ann("true-ann1.fa")
+    pred_ann1 = read_ann('validation/pred-ann1.fa')
+    print_all(true_ann1, pred_ann1)
