@@ -1,4 +1,6 @@
-
+import numpy as np
+from viterbi import *
+from TrainByCounting import *
 #use standart model to do the following translate
 #N means that the nucleotide is non-coding
 #C means that the nucleotide is coding and part of a gene is from left to right
@@ -172,3 +174,15 @@ def translate_ann_into_indices(ann, genome):
                 hidden_states_indices.extend([31, 32, 33])
             i += 3
     return hidden_states_indices
+
+def save_model(model, folder_name):
+    np.save(folder_name + '/init_probs.npy', model.init_probs)
+    np.save(folder_name + '/trans_probs.npy', model.trans_probs)
+    np.save(folder_name + '/emission_probs.npy', model.emission_probs)
+
+def load_model(folder_name):
+    init_probs = np.load(folder_name + '/init_probs.npy')
+    trans_probs = np.load(folder_name + '/trans_probs.npy')
+    emission_probs = np.load(folder_name + '/emission_probs.npy')
+    model = hmm(init_probs, trans_probs, emission_probs)
+    return model
