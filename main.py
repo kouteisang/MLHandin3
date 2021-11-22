@@ -28,9 +28,9 @@ if __name__ == '__main__':
         print(model.trans_probs)
     print("done with model training...")
 
-    for i in range(1, 6):
+    for i in range(1, 4):
         print("Round "+str(i)+" predicting...")
-        genome_transfer = translate_observations_to_indices(read_fasta_file('genome'+str(i)+'.fa')["genome"+str(i)][:1200])
+        genome_transfer = translate_observations_to_indices(read_fasta_file('genome'+str(i)+'.fa')["genome"+str(i)])
         model = load_model('models/validated_on_' + str(i))
         w = compute_w_log(model, genome_transfer)
         path = backtrack_log(model, genome_transfer, w)
