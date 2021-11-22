@@ -30,6 +30,14 @@ def opt_path_prob_log(w):
     w = np.array(w)
     return max(w[:,w.shape[1]-1])
 
+
+def translate_indices_to_ann(indices):
+    mapping = ['N',
+               'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C',
+               'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R', 'R']
+    return ''.join([mapping[i] for i in indices])
+
+
 def backtrack_log(model, x, w):
     w = np.array(w)
     y = w.shape[1]
