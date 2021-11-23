@@ -125,12 +125,24 @@ if __name__ == '__main__':
         # Print stats
     print_all(true_ann, pred_ann)
     '''
+    print('====================1====================')
     true_ann1 = read_ann("true-ann1.fa")
     pred_ann1 = read_ann('validation/pred-ann1.fa')
     print_all(true_ann1, pred_ann1)
-
+    print('====================2====================')
     true_ann2 = read_ann("true-ann2.fa")
     pred_ann2 = read_ann('validation/pred-ann2.fa')
     print_all(true_ann2, pred_ann2)
-
+    print('====================3====================')
+    true_ann3 = read_ann("true-ann3.fa")
+    pred_ann3 = read_ann('validation/pred-ann3.fa')
+    print_all(true_ann3, pred_ann3)
+    print('====================4====================')
+    true_ann4 = read_ann("true-ann4.fa")
+    pred_ann4 = read_ann('validation/pred-ann4.fa')
+    print_all(true_ann4, pred_ann4)
+    print('====================5====================')
+    true_ann5 = read_ann("true-ann5.fa")
+    pred_ann5 = read_ann('validation/pred-ann5.fa')
+    print_all(true_ann5, pred_ann5)
 
